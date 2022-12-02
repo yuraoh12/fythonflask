@@ -1,0 +1,8 @@
+<div>로그인 성공! {{ session.get('loginUser')['username'] }}님 반갑습니다! <a href="/">로그아웃</a></div>    
+<div><a href="/">메인으로</a></div>
+<hr>
+{% for music in music_list %}
+    <div>{{music['title']}} &nbsp&nbsp&nbsp&nbsp {{music['artist']}} &nbsp&nbsp&nbsp&nbsp 
+        {{music['genre']}} &nbsp&nbsp&nbsp&nbsp {{music['playtime']}} &nbsp&nbsp&nbsp&nbsp
+        <a href="/music/play/{{music['musicno']}}">재생</a></div><hr>
+{% endfor %}
